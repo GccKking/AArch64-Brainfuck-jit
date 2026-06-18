@@ -18,7 +18,9 @@ Some commented-out code provides additional debugging features: the print() func
 There are also utilities to print the execution time of both JIT compilation and interpreter modes, along with the starting address of dynamically generated machine code and memory addresses of libc functions (these features are also annotated in the source code).
 
 The project consists of only a small number of source files, so no Makefile build script is provided. You can compile it directly with the following command:
+
 `g++ AArch64_jit.cpp -o jit`
+
 If you need to debug the source code with GDB, append the `-g` flag during compilation.
 
 The built-in interpreter is a standard Brainfuck bytecode virtual machine with a straightforward implementation that requires no extra explanation.
