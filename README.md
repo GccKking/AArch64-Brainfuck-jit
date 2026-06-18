@@ -13,7 +13,9 @@ To run the Brainfuck program via the interpreter:
 
 To compile and execute via JIT:
 
-`./jit -j <filename>`
+```bash
+./jit -j <filename>
+```
 
 ## Comment
 Some commented-out code provides additional debugging features: the print() function outputs native AArch64 machine code generated during compilation. This project does not include a built-in disassembler, so you can use GDB to disassemble instructions instead.
@@ -21,7 +23,9 @@ There are also utilities to print the execution time of both JIT compilation and
 
 The project consists of only a small number of source files, so no Makefile build script is provided. You can compile it directly with the following command:
 
-`g++ AArch64_jit.cpp -o jit`
+```bash
+g++ AArch64_jit.cpp -o jit
+```
 
 If you need to debug the source code with GDB, append the `-g` flag during compilation.
 
