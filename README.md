@@ -3,7 +3,7 @@ This is a JIT compiler for the Brainfuck language targeting the AArch64 architec
 ## Usage
 (Ensure you are running on an AArch64-based Linux system.If not, errors such as SIGILL may occur)
 
-Assume the compiled executable is named jit.
+Assume the compiled executable is named ==jit==.
 
 To run the Brainfuck program via the interpreter:
 
