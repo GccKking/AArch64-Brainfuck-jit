@@ -7,7 +7,7 @@ Assume the compiled executable is named `jit`.
 
 To run the Brainfuck program via the interpreter:
 
-```zsh
+```bash
 `./jit -i <filename>`
 
 To compile and execute via JIT:
