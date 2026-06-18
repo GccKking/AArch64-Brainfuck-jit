@@ -8,7 +8,8 @@ Assume the compiled executable is named `jit`.
 To run the Brainfuck program via the interpreter:
 
 ```bash
-`./jit -i <filename>`
+./jit -i <filename>
+```
 
 To compile and execute via JIT:
 
