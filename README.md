@@ -45,3 +45,5 @@ ldrb w8, [x19]
 add w8, w8, #n
 strb w8, [x19]
 ```
+
+### `op_sub`
