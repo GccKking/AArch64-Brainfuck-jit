@@ -18,7 +18,7 @@ To compile and execute via JIT:
 ```
 
 ## Comment
-Some commented-out code provides additional debugging features: the print() function outputs native AArch64 machine code generated during compilation. This project does not include a built-in disassembler, so you can use GDB to disassemble instructions instead.
+Some commented-out code provides additional debugging features: the `print()` function outputs native AArch64 machine code generated during compilation. This project does not include a built-in disassembler, so you can use GDB to disassemble instructions instead.
 There are also utilities to print the execution time of both JIT compilation and interpreter modes, along with the starting address of dynamically generated machine code and memory addresses of libc functions (these features are also annotated in the source code).
 
 The project consists of only a small number of source files, so no Makefile build script is provided. You can compile it directly with the following command:
