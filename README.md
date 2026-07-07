@@ -37,4 +37,11 @@ BrainFuck's pre-optimization logic is straightforward: merge `n` consecutive ide
 
 The optimized BrainFuck byte stream will be split into the following basic operations: `op_add`, `op_sub`, `op_addn`, `op_subn`, `op_setz`, `op_jt`, `op_jf`, `op_in`, `op_out`.
 
+### `op_add`
+This operation increments the value stored in the memory cell pointed to by the BF pointer by n; the value of n is stored in the opcode structure after pre-optimization. The corresponding AArch64 assembly instructions for this operation are as follows: 
 
+```asm
+ldrb w8, [x19]
+add w8, w8, #n
+strb w8, [x19]
+```
