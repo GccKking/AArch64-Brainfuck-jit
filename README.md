@@ -32,3 +32,9 @@ If you need to debug the source code with GDB, append the `-g` flag during compi
 The built-in interpreter is a standard Brainfuck bytecode virtual machine with a straightforward implementation that requires no extra explanation.
 
 The JIT compiler converts processed Brainfuck byte streams into AArch64 machine code, writes the code into memory, and executes it.
+## Comments on JIT compilation
+BrainFuck's pre-optimization logic is straightforward: merge `n` consecutive identical increment or decrement operations into a single operation with operand `n`, and recognize `[+]` and `[-]` as zero-clearing operations.
+
+The optimized BrainFuck byte stream will be split into the following basic operations: `op_add`, `op_sub`, `op_addn`, `op_subn`, `op_setz`, `op_jt`, `op_jf`, `op_in`, `op_out`.
+
+
