@@ -1,7 +1,7 @@
 # AArch64-Brainfuck-jit
 This is a JIT compiler for the Brainfuck language targeting the AArch64 architecture. I came across an existing implementation for AMD64 and adapted its framework to build this AArch64 version. It supports both JIT compilation and interpreter execution modes, and has passed all test scripts in the test directory.
 ## Usage
-(Ensure you are running on an AArch64-based Linux system. If not, errors such as SIGILL may occur)
+(Ensure you are running on an AArch64-based Linux system. If not, errors such as SIGILL may occur. To run on AArch64-based Macs (Apple Silicon Macs), apart from specifying the `MAP_JIT` flag in `mmap` calls, additional modifications may be required for compatibility with the macOS ABI. You may conduct testing on your own)
 
 Assume the compiled executable is named `jit`.
 
